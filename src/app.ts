@@ -1,8 +1,9 @@
+import 'dotenv/config';
+
+import cors from 'cors';
 import express from 'express';
 import mongoose from 'mongoose';
-import cors from 'cors';
 
-import 'dotenv/config';
 import moviesRoutes from 'routes/movies';
 
 const app = express();
@@ -20,4 +21,5 @@ mongoose
     .then(() => {
         app.listen(8080);
     })
+    // eslint-disable-next-line no-console
     .catch((err) => console.log(err));

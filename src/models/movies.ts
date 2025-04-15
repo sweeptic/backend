@@ -1,4 +1,4 @@
-import mongoose, { model, Types } from 'mongoose';
+import mongoose, { Types, model } from 'mongoose';
 
 import { RatingSchema } from './rating';
 

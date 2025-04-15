@@ -1,4 +1,5 @@
 import { Request, Response } from 'express';
+
 import Movies from 'models/movies';
 
 export function getMovies(_req: Request, res: Response): void {
@@ -11,12 +12,12 @@ export function getMovies(_req: Request, res: Response): void {
             });
         });
 }
-
+//
+//
 export function getMovie(req: Request, res: Response): void {
     const movieId = req.params.movieId;
 
     Movies.findById(movieId).then((movieDetails) => {
-        console.log('getMovie run');
         return res.status(200).json({ movieDetails: movieDetails });
     });
 }

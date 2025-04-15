@@ -20,6 +20,19 @@ export default [
             prettier: prettier,
         },
         rules: {
+            'sort-imports': [
+                'error',
+                {
+                    ignoreCase: false,
+                    ignoreDeclarationSort: false,
+                    ignoreMemberSort: false,
+                    memberSyntaxSortOrder: ['none', 'all', 'multiple', 'single'],
+                    allowSeparatedGroups: false,
+                },
+            ],
+
+            'no-console': 'warn',
+            curly: 'error',
             indent: ['error', 4],
             quotes: ['error', 'single'],
             semi: ['error', 'always'],
@@ -33,6 +46,8 @@ export default [
                     semi: true,
                 },
             ],
+            '@typescript-eslint/explicit-function-return-type': 'error',
+            '@typescript-eslint/no-explicit-any': 'error',
         },
     },
 ];
